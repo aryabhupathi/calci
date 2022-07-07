@@ -18,8 +18,8 @@
     <input id="result" type="number"><br>
     <script>
         function calc(callback) {
-            var n1 = parseFloat(document.getElementById("a").value);
-            var n2 = parseFloat(document.getElementById("b").value);
+            var n1 = document.getElementById("a").value;
+            var n2 = document.getElementById("b").value;
             var result = callback(n1, n2);
             document.getElementById("result").value = result;
         }
