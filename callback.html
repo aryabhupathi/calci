@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Calculator</title>
+
+<head>
+</head>
+
+<body>
+    <h3>Calculator using Callback</h3>
+    <input type = "number" id = "a" placeholder="num1">
+    <input type = "number" id = "b" placeholder="num2"><br><br>
+    <input type="button" onclick="calc(add)" value="Add" id="add">
+    <input type="button" onclick="calc(sub)" value="Sub" id="sub">
+    <input type="button" onclick="calc(multiply)" value="Multiply" id="multiply">
+    <input type="button" onclick="calc(divide)" value="Divide" id="divide">
+    <br /><br />
+    <label for="result">RESULT:</label>
+    <input id="result" type="number"><br>
+    <script>
+        function calc(callback) {
+            var n1 = parseFloat(document.getElementById("a").value);
+            var n2 = parseFloat(document.getElementById("b").value);
+            var result = callback(n1, n2);
+            document.getElementById("result").value = result;
+        }
+
+        function add(n1, n2) {
+            return n1 + n2;
+        }
+        function sub(n1, n2) {
+            return n1 - n2;
+        }
+        function multiply(n1, n2) {
+            return n1 * n2;
+        }
+        function divide(n1, n2) {
+            return n1 / n2;
+        }
+    </script>
+</body>
+
+</html>
